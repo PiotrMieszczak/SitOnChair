@@ -1,7 +1,35 @@
 .main_width{
   width: 920px;
-
+  margin: 0 auto;
 }
 bod{
   width: 100%;
+}
+
+header{
+  text-transform: uppercase;
+  font-family: 'ralewaylight', Arial, sans-serif;
+  background: black;
+  color: white;
+
+}
+
+ul{
+  float: right;
+}
+
+li{
+  display: inline-block;
+  margin-right: 25px;
+}
+
+li:last-of-type{
+  margin: 0;
+}
+header p{
+  float:left;
+}
+
+header span{
+  color: rgb(15, 217, 180);
 }
