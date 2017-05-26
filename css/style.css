@@ -14,22 +14,163 @@ header{
 
 }
 
-ul{
+nav{
+  width: 30%;
   float: right;
 }
 
-li{
-  display: inline-block;
-  margin-right: 25px;
+
+
+header .menu > li {
+    display: inline;
+    padding-left: 10px;
+    position: relative;
 }
 
-li:last-of-type{
+header li:hover > ul{
+  display: block;
+}
+header .submenu{
+  position: absolute;
+  display: none;
+  background: black;
+
+  left: 0;
+  top: 100%;
+
+  padding-top: 20px;
+}
+
+/* Strzalka
+header .submenu::before {
+    display: inline-block;
+
+    border: 10px solid red;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    left: 30px;
+    top: -10px;
+}
+*/
+header .submenu li {
+    background: #000;
+    padding: 5px 20px;
+}
+
+
+.inline_block{
+  width: 30%;
+  display: inline;
+  margin-right: 3%;
+}
+
+.inline_block li:last-of-type{
   margin: 0;
 }
+
 header p{
+  width: 30%;
   float:left;
 }
 
-header span{
+.color_text{
   color: rgb(15, 217, 180);
+}
+#pics{
+
+height: 400px;
+
+background: rgba(242,243,247,1);
+background: -moz-linear-gradient(top, rgba(242,243,247,1) 0%, rgba(219,219,230,1) 79%, rgba(184,183,204,1) 93%, rgba(229,228,247,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,243,247,1)), color-stop(79%, rgba(219,219,230,1)), color-stop(93%, rgba(184,183,204,1)), color-stop(100%, rgba(229,228,247,1)));
+background: -webkit-linear-gradient(top, rgba(242,243,247,1) 0%, rgba(219,219,230,1) 79%, rgba(184,183,204,1) 93%, rgba(229,228,247,1) 100%);
+background: -o-linear-gradient(top, rgba(242,243,247,1) 0%, rgba(219,219,230,1) 79%, rgba(184,183,204,1) 93%, rgba(229,228,247,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,243,247,1) 0%, rgba(219,219,230,1) 79%, rgba(184,183,204,1) 93%, rgba(229,228,247,1) 100%);
+background: linear-gradient(to bottom, rgba(242,243,247,1) 0%, rgba(219,219,230,1) 79%, rgba(184,183,204,1) 93%, rgba(229,228,247,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', endColorstr='#e5e4f7', GradientType=0 );
+}
+
+#chair_img{
+  float: left;
+  margin-top: 50px;
+  width: 400px;
+  height: 300px;
+  background-image: url('../images/black_chair.png');
+  background-position: center;
+  background-size: contain;
+}
+
+
+#pics_description{
+  float: right;
+  width: 400px;
+  height: 300px
+}
+
+
+.link_more{
+
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+
+  text-transform: uppercase;
+  background-color: rgb(15, 217, 180);
+  color: white;
+
+  padding: 15px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  margin-left: 130px;
+
+}
+
+#pics_description p{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.section1{
+  width: 800px;
+  position: relative;
+}
+
+#pics_description p:first-child{
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 30px 0;
+
+}
+
+.arrow_right, .arrow_left{
+
+    position: absolute;
+    top: 150px;
+    border: 30px solid rgb(15, 217, 180);
+
+    border-top-color: transparent;
+    border-left-color: rgb(15, 217, 180);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+
+}
+
+.arrow_right{
+    left: 860px;
+
+}
+
+.arrow_left{
+    left: 0;
+    transform: rotate(180deg);
+
 }
