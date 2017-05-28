@@ -1,9 +1,11 @@
-
+body{
+  font-family: 'raleway',Arial, sans-serif;
+}
 
 .main_width{
   width: 920px;
   margin: 0 auto;
-  border:1px solid red;
+
 }
 
 
@@ -115,7 +117,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 .link_more{
 
-  /*width: 200px;*/
   height: 50px;
   font-size: 16px;
 
@@ -199,7 +200,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 #box3{
   padding: 15px;
-  height: 220px;
+  height: 250px;
   border: 1px solid rgb(147, 147, 147);
 }
 
@@ -245,6 +246,7 @@ p.box_description > span{
     width: 30%;
     margin-left: 3%;
     margin-bottom: 50px;
+    padding-top: 20px;
 }
 
 .box_pricelist{
@@ -308,12 +310,12 @@ p.box_description > span{
   position: absolute;
 
   height: 50px;
-  display: inline-block;
 
   margin: auto;
   left: 0;
   top: 20px;
   right: 0;
+
 
   text-align: center;
   text-transform: uppercase;
@@ -328,8 +330,8 @@ p.box_description > span{
   border: 1px solid #D3D3D3;
   background-color: white;
 
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
 
   border-radius: 50%;
   margin: auto;
@@ -337,13 +339,96 @@ p.box_description > span{
   top: 70px;
   right: 0;
 
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px;
+
+
+}
+
+.inner_circle span:first-child{
+    font-size: 30px;
+    position: relative;
+}
+.inner_circle span:last-child{
+    font-size: 10px;
+
+}
+sup{
+  font-size: 12px;
+  position: absolute;
+  top: 25px
+}
+
+.pricelist_items{
+    position: absolute;
+
+
+    width: 100%;
+
+    top: 210px;
+
+    text-align: center;
+}
+
+.pricelist_items li{
+  display: block;
+
+
+}
+.pricelist_items li{
+  display: block;
+
+}
+.pricelist_items li:nth-child(2n+1){
+    background-color: #dddddd;
+}
+.pricelist_items li:nth-child(2n+2){
+    background-color: #f0f0f0;
 }
 
 
+#pricelist .link_more{
+      position: absolute;
+
+      margin: 0 auto;
+      bottom: 10px;
+      left: 30%;
+      right: 30%;
+
+      width: 40%;
+      height: 10%;
+
+      display: inline-block;
+      padding: 10px;
+
+}
 #middle_pricelist_box{
   background-color: #00C4A0;
 
 }
+#middle_pricelist_box h2{
+  color: white;
+
+}
+#middle_pricelist_box ul{
+  width: 98%;
+  left: 1%;
+  right:1%;
+
+}
+#middle_pricelist_box .pricelist_items li:nth-child(2n+1){
+    background-color: #F7F4F6;
+}
+#middle_pricelist_box .pricelist_items li:nth-child(2n+2){
+    background-color: #f0f0f0;
+}
+
+#middle_pricelist_box .link_more{
+    background-color: white;
+    color: #00C4A0;
+}
+
 
 #middle_pricelist_box .circle_big{
   background-color: #00C4A0;
