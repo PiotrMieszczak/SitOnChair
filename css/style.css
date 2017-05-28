@@ -117,23 +117,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 .link_more{
 
-  height: 50px;
-  font-size: 16px;
+    width: 50%;
+    height: 50px;
 
-  text-transform: uppercase;
-  background-color: #00C4A0;
-  color: white;
+    border: none;
 
-  padding: 15px;
+    background-color: #00C4A0;
+    color: white;
 
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 15px;
-  width: 50%;
-  display: block;
-  margin: 0 auto;
 
+    border-radius: 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 #pics_description p{
@@ -158,6 +159,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 }
 
+#pics_description span{
+  font-weight: 700;
+}
+
 .arrow_right, .arrow_left{
       position: absolute;
       top: 150px;
@@ -176,7 +181,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 
 .box{
-  display: inline-block;
+  float: left;
   position: relative;
 
   width: 30%;
@@ -231,6 +236,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3f7', end
 
 p.box_description > span{
     text-transform: uppercase;
+
+
 }
 
 #box3 p:last-child{
@@ -356,8 +363,8 @@ p.box_description > span{
 }
 sup{
   font-size: 12px;
-  position: absolute;
-  top: 25px
+  position: relative;
+  top: -20px;
 }
 
 .pricelist_items{
@@ -397,10 +404,10 @@ sup{
       right: 30%;
 
       width: 40%;
-      height: 10%;
 
       display: inline-block;
-      padding: 10px;
+      height: 30px;
+      padding: 1px;
 
 }
 #middle_pricelist_box{
@@ -427,6 +434,7 @@ sup{
 #middle_pricelist_box .link_more{
     background-color: white;
     color: #00C4A0;
+
 }
 
 
