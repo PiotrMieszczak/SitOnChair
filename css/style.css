@@ -125,9 +125,9 @@ header p {
   float: left;
   width: 500px;
   height: 400px;
-  background-image: url('../images/black_chair.png');
+  /*background-image: url('../images/black_chair.png');
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 #pics_description {
@@ -562,6 +562,6 @@ p.footer_pic span {
   display: none;
 }
 
-.show_list{
-  display: inline-block;
+.show{
+  display: block;
 }
