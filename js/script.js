@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
        
         });
 
-
-
         //slider
         var slider = document.querySelector('.slider');
         var previous = document.querySelector('.arrow_left');
@@ -71,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if(index > sliderLis.length-1){ //loop photos
                         index = 0;
-                }
+                }innerHTML
 
                 sliderLis[index].classList.remove('hidden');
 
@@ -111,12 +109,76 @@ var list_panels =  document.querySelectorAll('.list_panel');
         })
    });
 
+var cost1 = 0;
+var cost2 = 0;
+var cost3 = 0;
+var cost4 = 0;
+
+var summary = document.querySelector('.sum');
+
 var checkbox = document.querySelector('#transport');
 
         checkbox.addEventListener('click',function(event){
                 event.preventDefault(event);
-                this.previousElementSibling.classList.toggle('agree');       
+
+                if(this.previousElementSibling.className.indexOf('agree')){
+                        this.previousElementSibling.classList.add('agree');   
+                        cost4 = parseInt(this.dataset.transportPrice);
+                              
+                }else{
+                       this.previousElementSibling.classList.remove('agree');  
+                       cost4 =0;
+                       
+                }
+
+                summary.innerText = cost1 + cost2 + cost3 + cost4;   
+
+        });
+        
+var chairs = document.querySelectorAll('.chairs_list li');
+
+
+
+
+        [...chairs].map(function(chair){
+                chair.addEventListener('click', function(){
+                        var your_chair = document.querySelector('.panel_left  h4');
+                        var chair_value = document.querySelector('.title_value');
+                       // console.log(chair_value);
+                                your_chair.innerText = this.innerText;
+                                chair_value.innerText = this.dataset.price;
+                                cost1 = parseInt(this.dataset.price);
+                                summary.innerText = cost1 + cost2 + cost3 + cost4;
+                })
         });
 
+var colors = document.querySelectorAll('.colors_list li');
+        [...colors].map(function(color){
+                color.addEventListener('click', function(){
+                        var your_color = document.querySelector('.panel_left .color');
+                        var color_value = document.querySelector('.panel_right .color_value');
+                                your_color.innerText = this.innerText;
+                                color_value.innerText =  this.dataset.price;
+                                cost2 = parseInt(this.dataset.price);
+                                summary.innerText = cost1 + cost2 + cost3 + cost4;
+                              
+                })             
+
+        });
+
+var materials = document.querySelectorAll('.material_list li');
+
+        [...materials].map(function(material){
+                material.addEventListener('click', function(){
+                        var your_material = document.querySelector('.panel_left .pattern');
+                        var material_value = document.querySelector('.panel_right .pattern_value');
+                                your_material.innerText = this.innerText;
+                                material_value.innerText = this.dataset.price;
+                                cost3 = parseInt(this.dataset.price);
+
+                                summary.innerText = cost1 + cost2 + cost3 + cost4;   
+                })
+        });
+                
 
 });
