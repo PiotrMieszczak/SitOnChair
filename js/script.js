@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-        //menu event
+        //drop down menu
         var submenu = document.querySelector('.submenu');
 
         submenu.classList.add('hidden');
@@ -13,26 +13,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 submenu.classList.toggle('hidden');
         });
 
-        //gallery event
-        var box_description_background = document.querySelectorAll('.box_description_background');
-        // console.log(box_description_background);
+        //gallery
+        var box1 = document.querySelector(' #box1');
+        var box2 = document.querySelector(' #box2');
+        
+        
+        var description1 = box1.firstElementChild;
 
-        for (var i = 0; i < box_description_background.length; i++) {
 
-                box_description_background[i].addEventListener('mouseover',function(event){                
-                        this.classList.toggle('hidden');
-                      //  this.firstElementChild.classList.toggle('hidden');
-                        console.log('box');
-                         
-                });
+        var description2 = box2.firstElementChild;
+  
 
-                box_description_background[i].addEventListener('mouseout', function (event) {
-                    // this.classList.toggle('hidden');
-                   //  this.firstElementChild.classList.toggle('hidden');
-                     console.log('out');
 
-                });
-        }
+        box1.addEventListener('mouseenter',function(){
+                var description1 = box1.firstElementChild;
+
+                description1.classList.toggle('hidden');
+       
+        });
+
+        box1.addEventListener('mouseleave',function(){
+                var description = box1.firstElementChild;
+
+                description.classList.toggle('hidden');
+       
+        });
+
+         box2.addEventListener('mouseenter',function(){
+                var description = box2.firstElementChild;
+
+                description.classList.toggle('hidden');
+       
+        });
+
+        box2.addEventListener('mouseleave',function(){
+                var description = box2.firstElementChild;
+
+                description.classList.toggle('hidden');
+       
+        });
+
 
 
         //slider
@@ -69,6 +89,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 sliderLis[index].classList.remove('hidden');
 
+        });
+
+
+//calculator
+
+
+var  list_arrows = document.querySelectorAll('.list_arrow');
+
+var list_panels =  document.querySelectorAll('.list_panel');
+
+[...list_panels].map(function(panel){ //by default list should be hidden
+        panel.classList.add('hidden');
+});
+
+   [...list_arrows].map(function(arrow){
+        arrow.addEventListener('click',function(){
+                var list_panel = this.nextElementSibling;      
+                  list_panel.classList.toggle('hidden');
+
+        })
+   });
+
+var checkbox = document.querySelector('#transport');
+
+        checkbox.addEventListener('click',function(event){
+                event.preventDefault(event);
+                this.previousElementSibling.classList.toggle('agree');       
         });
 
 
