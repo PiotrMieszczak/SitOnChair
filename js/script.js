@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var sliderLis = slider.querySelectorAll('li');
 
-        var index =0 ;
+        var index = 0 ;
 
         next.addEventListener('click', function(){
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if(index > sliderLis.length-1){ //loop photos
                         index = 0;
-                }innerHTML
+                }
 
                 sliderLis[index].classList.remove('hidden');
 
@@ -136,8 +136,6 @@ var checkbox = document.querySelector('#transport');
         });
         
 var chairs = document.querySelectorAll('.chairs_list li');
-
-
 
 
         [...chairs].map(function(chair){
